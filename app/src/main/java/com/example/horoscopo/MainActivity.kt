@@ -5,9 +5,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.horoscopo.data.Horoscope
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var rvHoroscope: RecyclerView
+    private lateinit var horoscopeAdapter: HoroscopeAdapter
 
     val horoscopeList = listOf(
         Horoscope("aries", R.string.horoscope_name_aries, R.string.horoscope_date_aries, R.drawable.aries_icon),
@@ -33,5 +38,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        initComponents()
+        initUI()
     }
+
+    private fun initComponents() {
+        rvHoroscope = findViewById(R.id.rvHoroscope)
+    }
+
+    private fun initUI() {
+        horoscopeAdapter = HoroscopeAdapter(horoscopeList)
+        rvHoroscope.layoutManager = LinearLayoutManager(this)
+        rvHoroscope.adapter = horoscopeAdapter
+    }
+
 }
