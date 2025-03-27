@@ -2,6 +2,7 @@ package com.example.horoscopo.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.horoscopo.HoroscopeAdapter
 import com.example.horoscopo.R
-import com.example.horoscopo.data.Horoscope
 import com.example.horoscopo.data.HoroscopeProvider
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity() {
 
         initComponents()
         initUI()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.activity_main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun initComponents() {
