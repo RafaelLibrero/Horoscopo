@@ -10,12 +10,13 @@
         android:id="@+id/ivIcon"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:src="@drawable/aries_icon"/>
+        tools:src="@drawable/aries_icon" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_weight="1"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
@@ -25,16 +26,23 @@
             android:layout_height="wrap_content"
             android:textSize="32sp"
             android:textStyle="bold"
-            tools:text="@string/horoscope_name_aries"/>
+            tools:text="@string/horoscope_name_aries" />
 
         <TextView
             android:id="@+id/tvDates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            tools:text="@string/horoscope_date_aries"
-            />
+            tools:text="@string/horoscope_date_aries" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivFavorite"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_favorite_selected"
+        app:tint="@color/favorite" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
