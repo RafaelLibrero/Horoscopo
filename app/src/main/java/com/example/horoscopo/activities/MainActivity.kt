@@ -3,8 +3,6 @@ package com.example.horoscopo.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
-import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -15,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.horoscopo.HoroscopeAdapter
 import com.example.horoscopo.R
-import com.example.horoscopo.data.Horoscope
 import com.example.horoscopo.data.HoroscopeProvider
 
 class MainActivity : AppCompatActivity() {
